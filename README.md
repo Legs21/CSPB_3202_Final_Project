@@ -1,6 +1,14 @@
 # CSPB_3202_Final_Project
+
 # Overview
-This project uses the Stable Baselines3 library to look at two different RL algorithms and how they learn and interact in the Lunar Lander v3 environment from OpenAI's gymnasium. 
+This is the final project of the CSPB Intro to AI course. It looks at two different RL algorithms in the Lunar Lander environment.
+
+The two RL algorithms I am looking at are Deep Q Network (DQN) and Proximal Policy Optimization (PPO). I am utlizing the [Stable Baselines3](https://stable-baselines3.readthedocs.io/en/master/index.html) library to set up and test the two algorithms against each other in the same environment from gymnasium. The environment I will be testing them in is the [LunarLander-v3](https://gymnasium.farama.org/environments/box2d/lunar_lander/) from the OpenAI Gymnasium.
+
+# Lunar Lander v3
+
+The Lunar Lander v3 environment we will be using has 4 discret actions; do nothing, fire left engine, fire main engine, fire right engine. Since these are discrte actions, the engines are either full on, or fully off. The rewards for the observation space are outlined in the Gymnasium Documentation linked above.
+
 # PPO
 The Proximal Policy Optimization (PPO) algorithm is a policy gradient method, which is slightly different from the algorithms we have looked at in this class. PPO is the [default algorithm used at OpenAI](https://openai.com/index/openai-baselines-ppo/) and has a few characteristics that make it ideal for there uses. Since it is a gradient policy, PPO looks to take relatively small steps in learning, makeing deviation from the previous iteration smaller than other algorithms.
 
@@ -26,12 +34,15 @@ The hyperparameters noted above are the "clipping" that takes place in order to 
 
 # DQN
 
-The Deep Q Network (DQN) implemented by Stable Baselines3 is very similar to the algorithm we looked at this semester. It examines the environment, takes a list of actions, and determine a future discounted reward to assess what action to take.
+The Deep Q Network (DQN) implemented by Stable Baselines3 is very similar to the algorithm we looked at this semester. It examines the environment, takes a list of actions, and determine a future discounted reward to assess what action to take. I picked this as the other algorithm because it is one of the first successful and popular algorithms and will be useful to compare to PPO.
 
 # Results/Conclusions
 
 First, we will look at the performance of DQN. As we can see 
 ![DQN chart](/media/DQN_perf_chart.png "DQN Performance Chart") 
 
-
 ![PPO chart](/media/PPO_perf_chart.png "PPO Performance Chart")
+
+# Suggestions and Improvements
+
+
