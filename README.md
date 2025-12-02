@@ -39,9 +39,9 @@ The Deep Q Network (DQN) implemented by Stable Baselines3 is very similar to the
 # Results/Conclusions
 
 First, we will look at the performance of DQN. As we can see 
-![DQN chart](/media/DQN_perf_chart.png "DQN Performance Chart") 
+![DQN chart](/media/DQN_perf_chart.png "DQN Performance Chart") ![DQN gif](/media/DQN_Lunar_Lander_vid.gif) 
 
-![PPO chart](/media/PPO_perf_chart.png "PPO Performance Chart")
+![PPO chart](/media/PPO_perf_chart.png "PPO Performance Chart") ![PPO gif](/media/PPO_Lunar_Lander_vid.gif)
 
 # Suggestions and Improvements
 
