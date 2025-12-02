@@ -38,11 +38,23 @@ The Deep Q Network (DQN) implemented by Stable Baselines3 is very similar to the
 
 # Results/Conclusions
 
-First, we will look at the performance of DQN. As we can see 
-![DQN chart](/media/DQN_perf_chart.png "DQN Performance Chart") ![DQN gif](/media/DQN_Lunar_Lander_vid.gif) 
+First, we will look at the performance of DQN. As we can see from the learning chart below, it started in the negative and struggled to break out of this cycle. The mean rewards of all of the episodes also have a large, but fairly similar distribution, suggesting less exploration until the very end of the timesteps.
 
-![PPO chart](/media/PPO_perf_chart.png "PPO Performance Chart") ![PPO gif](/media/PPO_Lunar_Lander_vid.gif)
+![DQN chart](/media/DQN_perf_chart.png "DQN Performance Chart") 
+
+The video below is a sample of the performance of the model with the best mean rewards. As we can see, while it generally gravitates towards the reward, it is still slightly erratic in it's movements, sometimes it wull hover for a long time, while other times it dropps like a rock. This is indicitave of multiple paths to higher points in the environment.
+
+![DQN gif](/media/DQN_Lunar_Lander_vid.gif) 
+
+The PPO learning chart shows distinct differences in it's learnign vs DQN. PPO starts VERY far in the negative as it finds the lower bound to move away from. As the alg develops, it slowly but surely moves in the positive direction, with less deviation from the mean reward, indicitive of the conservative nature of the PPO alg.
+
+![PPO chart](/media/PPO_perf_chart.png "PPO Performance Chart") 
+
+The video reflects a similar story, with the lander generally coming down at a decent and controlled pace without much difference between each run. Interestingly, the lander always seems to target the sides of the landing zone, and not necessarily the middle of the landing zone.
+
+![PPO gif](/media/PPO_Lunar_Lander_vid.gif)
 
 # Suggestions and Improvements
 
+I spent a lot more time than I had origionally anticipated trying to get the environment and algorithms properly integrated and setup. Understanding the Stable Baselines3 library took some time and investigation. One thing that I would want to do going forward is see what parameters I could change on the default algorithm to make it ideal for the lunar lander environment. This could be useful to see which algorithm works best for certain time step iterations. In this experiment, if you were limited o a small number of timesteps, DQN might actually be the alg of choice becasue it could give you a slightly better product right off the bat. PPO is better in the long run since it provides a more stable and predictable agent.
 
